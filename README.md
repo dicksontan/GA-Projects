@@ -52,11 +52,13 @@ As an analyst in the United States Department of Education, I have been tasked t
 
 |Feature 1|Feature 2|Correlation|
 |---|---|---|
-|ACT/SAT Participation|ACT/SAT Score 2018|SAT|+|
+|ACT/SAT Participation|ACT/SAT Score 2018|+|
 |ACT/SAT Scores|ACT/SAT Participation| - |
 |ACT Participation|SAT Participation| - |
 |ACT Score|SAT Score| + |
 |2017 Participation|2018 Participation| + |
+
+Through our research, we also found that there is an increase in participation in the proportion of students taking SAT. This is possibly due to some states such as Colorado ([source](https://www.coloradoindependent.com/2017/07/06/from-csap-to-parcc-heres-how-colorados-standardized-tests-have-changed-and-whats-next/)) and Illinois ([source](https://www.chicagotribune.com/news/ct-illinois-chooses-sat-met-20160211-story.html)) mandating that their students should take the SAT. Moreover, we also realised that many of the underperforming states are from the South West, near the Mexican border. This prompted us to do more research on ethnicity, where we realised that states with higher Hispanic population tend to underperform for the exams. 
 
 ---
 
