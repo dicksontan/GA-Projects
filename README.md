@@ -8,15 +8,21 @@
 - [Conclusions and Recommendations](#Conclusions-and-Recommendations)
 - [Sources](#Sources)
 
+---
+
 ### Overview
 
 The SAT and ACT are standardized tests that many colleges and universities in the United States require for their admissions process. This score is used along with other materials such as grade point average (GPA) and essay responses to determine whether or not a potential student will be accepted to the university. In 2017, 2.03 million high school students took the ACT([source](https://www.act.org/content/dam/act/unsecured/documents/cccr2017/CCCR_National_2017.pdf )), and 1.8 million students took the SAT([source](https://reports.collegeboard.org/archive/sat-suite-program-results/2017/overview#:~:text=The%20class%20of%202017%20is,takers%20took%20the%20new%20SAT)). The U.S. Department of Education is the agency of the federal government that establishes policies for education. By studying the relationship between participation rates and test scores, it can give recommendations on whether mandating students to participate in ACT/SAT is beneficial in raising education standards in the country.
+
+---
 
 ### Problem Statement
 
 As an analyst in the United States Department of Education, I have been tasked to investigate if states that have a higher exam participation rate perform better than states with lower participation rates. If so, it would provide strong grounds for states to mandate that all students participate in the ACT/SAT.
 
-##Data Dictionary
+---
+
+### Data Dictionary
 
 |Feature|Type|Dataset|Description|
 |---|---|---|---|
@@ -44,6 +50,13 @@ As an analyst in the United States Department of Education, I have been tasked t
 
 ### Summary of Analysis
 
+|Feature 1|Feature 2|Correlation|
+|---|---|---|
+|ACT/SAT Participation|ACT/SAT Score 2018|SAT|+|
+|ACT/SAT Scores|ACT/SAT Participation| - |
+|ACT Participation|SAT Participation| - |
+|ACT Score|SAT Score| + |
+|2017 Participation|2018 Participation| + |
 
 ---
 
