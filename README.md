@@ -6,7 +6,7 @@
 - [Data Dictionary](#Data-Dictionary)
 - [Datasets](#Datasets)
 - [Summary of Analysis](#Summary-of-Analysis)
-- [Conclusion and Recommendations](#Conclusions-and-Recommendations)
+- [Conclusion and Recommendations](#Conclusion-and-Recommendations)
 - [Sources](#Sources)
 
 ---
