@@ -12,7 +12,7 @@
 
 ### Overview
 
-The SAT and ACT are standardized tests that many colleges and universities in the United States require for their admissions process. This score is used along with other materials such as grade point average (GPA) and essay responses to determine whether or not a potential student will be accepted to the university. In 2017, 2.03 million high school students took the ACT([source](https://www.act.org/content/dam/act/unsecured/documents/cccr2017/CCCR_National_2017.pdf )), and 1.8 million students took the SAT([source](https://reports.collegeboard.org/archive/sat-suite-program-results/2017/overview#:~:text=The%20class%20of%202017%20is,takers%20took%20the%20new%20SAT)). The U.S. Department of Education is the agency of the federal government that establishes policies for education. By studying the relationship between participation rates and test scores, it can give recommendations on whether mandating students to participate in ACT/SAT is beneficial in raising education standards in the country.
+The SAT and ACT are standardized tests that many colleges and universities in the United States require for their admissions process. The test score is used along with other materials such as grade point average (GPA) and essay responses to determine whether or not a potential student will be accepted to the university. In 2017, 2.03 million high school students took the ACT([source](https://www.act.org/content/dam/act/unsecured/documents/cccr2017/CCCR_National_2017.pdf )), and 1.8 million students took the SAT([source](https://reports.collegeboard.org/archive/sat-suite-program-results/2017/overview#:~:text=The%20class%20of%202017%20is,takers%20took%20the%20new%20SAT)). The U.S. Department of Education is the agency of the federal government that establishes policies for education. By studying the relationship between participation rates and test scores, it can give recommendations on whether mandating students to participate in the ACT/SAT is beneficial in raising education standards in the country.
 
 ---
 
@@ -54,8 +54,7 @@ As an analyst in the United States Department of Education, I have been tasked t
 * [`act_2018.csv`](./data/act_2018.csv): 2018 ACT Scores by State ([source](https://blog.prepscholar.com/act-scores-by-state-averages-highs-and-lows))
 * [`sat_2017.csv`](./data/sat_2017.csv): 2017 SAT Scores by State ([source](https://blog.collegevine.com/here-are-the-average-sat-scores-by-state/))
 * [`sat_2018.csv`](./data/sat_2018.csv): 2018 SAT Scores by State ([source](https://blog.collegevine.com/here-are-the-average-sat-scores-by-state/))
-* [`sat_2018.csv`](./data/sat_2018.csv): 2018 SAT Scores by State ([source](https://blog.collegevine.com/here-are-the-average-sat-scores-by-state/))
-* [`EthnicData.csv`](./data/sat_2018.csv): 2022 Ethnic Breakdown by State ([source](https://worldpopulationreview.com/states/states-by-race))
+* [`EthnicData.csv`](./data/EthnicData.csv): 2022 Ethnic Breakdown by State ([source](https://worldpopulationreview.com/states/states-by-race))
 ---
 
 ### Summary of Analysis
@@ -77,8 +76,18 @@ Through our research, we also found that there is an increase in participation i
 - As there is a negative correlation between ACT/SAT scores and their respective participation rates, we cannot justify that mandating full participation of ACT/SAT for all students will lead to higher scores. This negative correlation could be caused by selection bias, as states who do not mandate or actively encourage students to take the ACT/SAT will result in only the best students choosing to sit for the exams as they know that they can score well ([source](https://blog.prepscholar.com/average-sat-and-act-scores-by-stated-adjusted-for-participation-rate)).
 
 - The Department of Education can consider focusing their efforts in raising the education levels of the identified worst performing states, as they have the most room for improvement. This is especially so for New Mexico and Texas, which are the among the worst underperformers for both SAT and ACT. 
+1. Utah
+2. New Mexico
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
 
-- Through closer examination of the breakdown in ethnicity, we note that states who have higher than average 'Others' ethnicity are in danger of underperforming. Looking at state data for hispanic individuals in 2019, we can see that many underperforming states such as New Mexico, Texas, Arizona and Nevada are indeed states that have high hispanic populations [source](https://www.statista.com/statistics/259865/percentage-of-hispanic-population-in-the-us-by-state/)).Further research shows that certain states such as Texas and Illinois are not awarded equal amounts of education funding which is a significant factor as funds do play a part in raising education level [source](https://cdn.americanprogress.org/content/uploads/2018/11/08042733/LessonsLearned_SchoolFunding-report-4.pdf)). Hence, we must make sure that adequate resources are provided to people of 'Others' ethnicity, to improve the overall education level of the state.
+- Through closer examination of the breakdown in ethnicity, we note that states who have higher than average 'Others' ethnicity are in high risk of underperforming. Looking at state data for hispanic individuals in 2019, we can see that many underperforming states such as New Mexico, Texas, Arizona and Nevada are indeed states that have high hispanic populations [source](https://www.statista.com/statistics/259865/percentage-of-hispanic-population-in-the-us-by-state/)).Further research shows that certain states such as Texas and Illinois are not awarded equal amounts of education funding which is a significant factor as funds do play a part in raising education level [source](https://cdn.americanprogress.org/content/uploads/2018/11/08042733/LessonsLearned_SchoolFunding-report-4.pdf)). Hence, we must make sure that adequate resources are provided to people of 'Others' ethnicity, to improve the overall education level of the state.
 
 ---
 
