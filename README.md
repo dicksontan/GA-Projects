@@ -95,19 +95,13 @@ Through our research, we also found that there is an increase in participation i
 ### Sources
     
 1. https://www.act.org/content/dam/act/unsecured/documents/cccr2017/CCCR_National_2017.pdf (ACT participation figures)
-    
 2. https://reports.collegeboard.org/archive/sat-suite-program-results/2017/overview#:~:text=The%20class%20of%202017%20is,takers%20took%20the%20new%20SAT (SAT participation figures)
-    
-3. https://worldpopulationreview.com/states/states-by-race (Breakdown by Ethnicity)
-    
-4. https://cdn.americanprogress.org/content/uploads/2018/11/08042733/LessonsLearned_SchoolFunding-report-4.pdf (Less funding)
-   
-5. https://www.statista.com/statistics/259865/percentage-of-hispanic-population-in-the-us-by-state/ (Hispanic Breakdown)
-    
+3. https://www.statista.com/statistics/259865/percentage-of-hispanic-population-in-the-us-by-state/ (Hispanic Breakdown)
+4. https://worldpopulationreview.com/states/states-by-race (Breakdown by Ethnicity)
+5. https://cdn.americanprogress.org/content/uploads/2018/11/08042733/LessonsLearned_SchoolFunding-report-4.pdf (Less funding) 
 6. https://www.coloradoindependent.com/2017/07/06/from-csap-to-parcc-heres-how-colorados-standardized-tests-have-changed-and-whats-next/ (Colorado switch to SAT)
-
 7. https://www.chicagotribune.com/news/ct-illinois-chooses-sat-met-20160211-story.html (Illinois switch to SAT)
-    
 8. https://www.alaskapublic.org/2016/07/01/alaska-changes-hs-diploma-requirements-no-more-sat-act/ (Alaska drop ACT/SAT for diploma)
-    
 9. https://blog.prepscholar.com/average-sat-and-act-scores-by-stated-adjusted-for-participation-rate (Selection Bias of participation rates)
+
+
