@@ -2,10 +2,11 @@
 
 ### Contents:
 - [Overview](#Overview)
-- [Data Import & Cleaning](#Data-Import-and-Cleaning)
-- [Exploratory Data Analysis](#Exploratory-Data-Analysis)
-- [Data Visualization](#Visualize-the-Data)
+- [Data Dictionary](#Data-Dictionary)
+- [Datasets](#Datasets)
+- [Summary of Analysis](#Summary-of-Analysis)
 - [Conclusions and Recommendations](#Conclusions-and-Recommendations)
+- [Sources](#Sources)
 
 ### Overview
 
@@ -15,7 +16,7 @@ The SAT and ACT are standardized tests that many colleges and universities in th
 
 As an analyst in the United States Department of Education, I have been tasked to investigate if states that have a higher exam participation rate perform better than states with lower participation rates. If so, it would provide strong grounds for states to mandate that all students participate in the ACT/SAT.
 
-Data Dictionary
+##Data Dictionary
 
 |Feature|Type|Dataset|Description|
 |---|---|---|---|
@@ -53,7 +54,6 @@ Data Dictionary
 
 
 ### Sources
-## My Outside Research:
     
 1. https://www.act.org/content/dam/act/unsecured/documents/cccr2017/CCCR_National_2017.pdf (ACT participation figures)
     
