@@ -76,16 +76,16 @@ Through our research, we also found that there is an increase in participation i
 - As there is a negative correlation between ACT/SAT scores and their respective participation rates, we cannot justify that mandating full participation of ACT/SAT for all students will lead to higher scores. This negative correlation could be caused by selection bias, as states who do not mandate or actively encourage students to take the ACT/SAT will result in only the best students choosing to sit for the exams as they know that they can score well ([source](https://blog.prepscholar.com/average-sat-and-act-scores-by-stated-adjusted-for-participation-rate)).
 
 - The Department of Education can consider focusing their efforts in raising the education levels of the identified worst performing states, as they have the most room for improvement. This is especially so for New Mexico and Texas, which are the among the worst underperformers for both SAT and ACT. 
-1. Utah
-2. New Mexico
-3.
-4.
-5.
-6.
-7.
-8.
-9.
-10.
+    1. New Mexico
+    2. Texas
+    3. Utah
+    4. West Virginia
+    5. Illinois
+    6. Hawaii
+    7. OKlahoma
+    8. Alaska
+    9. Arizona
+    10.Nevada
 
 - Through closer examination of the breakdown in ethnicity, we note that states who have higher than average 'Others' ethnicity are in high risk of underperforming. Looking at state data for hispanic individuals in 2019, we can see that many underperforming states such as New Mexico, Texas, Arizona and Nevada are indeed states that have high hispanic populations [source](https://www.statista.com/statistics/259865/percentage-of-hispanic-population-in-the-us-by-state/)).Further research shows that certain states such as Texas and Illinois are not awarded equal amounts of education funding which is a significant factor as funds do play a part in raising education level [source](https://cdn.americanprogress.org/content/uploads/2018/11/08042733/LessonsLearned_SchoolFunding-report-4.pdf)). Hence, we must make sure that adequate resources are provided to people of 'Others' ethnicity, to improve the overall education level of the state.
 
