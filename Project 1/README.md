@@ -25,7 +25,7 @@ As an analyst in the United States Department of Education, I have been tasked t
 
 ### Data Dictionary
 
-**Exams_df
+**Exams_df**
 
 |Feature|Type|Dataset|Description|
 |---|---|---|---|
@@ -39,7 +39,7 @@ As an analyst in the United States Department of Education, I have been tasked t
 |sat_total_2017|float|SAT|Average state score for 2017 SAT, max 1600|
 |sat_total_2018|float|SAT|Average state score for 2018 SAT, max 1600|
 
-**Ethnic_df
+**Ethnic_df**
 
 |Feature|Type|Dataset|Description|
 |---|---|---|---|
