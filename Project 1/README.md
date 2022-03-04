@@ -25,6 +25,8 @@ As an analyst in the United States Department of Education, I have been tasked t
 
 ### Data Dictionary
 
+**Exams_df
+
 |Feature|Type|Dataset|Description|
 |---|---|---|---|
 |State|Str|ACT/SAT|States of ACT/SAT data|
@@ -36,6 +38,8 @@ As an analyst in the United States Department of Education, I have been tasked t
 |act_composite_2018|float|ACT|Average state score for 2018 ACT, max 36|
 |sat_total_2017|float|SAT|Average state score for 2017 SAT, max 1600|
 |sat_total_2018|float|SAT|Average state score for 2018 SAT, max 1600|
+
+**Ethnic_df
 
 |Feature|Type|Dataset|Description|
 |---|---|---|---|
