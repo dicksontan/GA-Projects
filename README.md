@@ -8,6 +8,8 @@
 - [Conclusion and Recommendations](#Conclusion-and-Recommendations)
 - [Sources](#Sources)
 
+---
+
 ### Problem Statement
 The problem that I would like to tackle in this project is: 
 
@@ -17,9 +19,13 @@ Conversely, this will also be useful for buyers who might be looking to resell t
 
 We will be creating a linear predictive model using using Linear, Lasso, Ridge or ElasticNet regression to investigate and identify the features which have a strong positive or negative relationship with housing sale prices.
 
+---
+
 ### Datasets
 
 The dataset used for this project is based off the greater region of Ames, Iowa. It is collected from 2006 to 2010 by the Ames Assessor's Office. 
+
+---
 
 ## Data Dictionary
 
@@ -134,7 +140,7 @@ The following features were identified as having a relationship with sale price:
 |2nd Floor sq ft| + |
 |Age Since Remod| - |
 |Age Sold| - |
-|Basement Unfished sq ft| + |
+|Basement Unfished sq ft| - |
 
 From observing the features that have been identified as crucial in predicting house prices, we can see that area, quality, the type of neighborhood, condition and age all have a relationship with house prices. 
 
