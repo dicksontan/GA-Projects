@@ -27,7 +27,7 @@ The dataset used for this project is based off the greater region of Ames, Iowa.
 
 ---
 
-## Data Dictionary
+### Data Dictionary
 
 |Feature|Format|Type|Description|
 |---|---|---|---|
