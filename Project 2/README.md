@@ -118,6 +118,8 @@ A comprehensive data dictionary describing the features is also included in the 
 
 ### Summary of Analysis
 
+The liner model most suitable for this project is the Ridge Model.
+
 The following features were identified as having a relationship with sale price:
 
 |Feature|Relationship|
