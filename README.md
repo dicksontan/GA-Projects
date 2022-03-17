@@ -15,7 +15,7 @@ The problem that I would like to tackle in this project is:
 
 Conversely, this will also be useful for buyers who might be looking to resell their house.
 
-Based on this problem statement, I will create a linear predictive model using using Linear, Lasso, Ridge or ElasticNet regression to investigate and identify the features which have a strong positive or negative relationship with housing sale prices.
+We will be creating a linear predictive model using using Linear, Lasso, Ridge or ElasticNet regression to investigate and identify the features which have a strong positive or negative relationship with housing sale prices.
 
 ### Datasets
 
@@ -112,36 +112,45 @@ A comprehensive data dictionary describing the features is also included in the 
 
 ### Summary of Analysis
 
-|Feature 1|Feature 2|Correlation|
-|---|---|---|
-|ACT/SAT Participation|ACT/SAT Score 2018|+|
-|ACT/SAT Scores|ACT/SAT Participation| - |
-|ACT Participation|SAT Participation| - |
-|ACT Score|SAT Score| + |
-|2017 Participation|2018 Participation| + |
+The following features were identified as having a relationship with sale price:
 
-Through our research, we also found that there is an increase in participation in the proportion of students taking SAT. This is possibly due to some states such as Colorado ([source](https://www.coloradoindependent.com/2017/07/06/from-csap-to-parcc-heres-how-colorados-standardized-tests-have-changed-and-whats-next/)) and Illinois ([source](https://www.chicagotribune.com/news/ct-illinois-chooses-sat-met-20160211-story.html)) mandating that their students should take the SAT. Moreover, we also realised that many of the underperforming states are from the South West, near the Mexican border. This prompted us to do more research on ethnicity, where we realised that states with higher Hispanic population tend to underperform for the exams. 
+|Feature|Relationship|
+|---|---|
+|overall_qual|+|
+|ground living area| + |
+|exterior quality| + |
+|Kitchen Quality| + |
+|Total Basement sq ft|+|
+|Garage Area| + |
+|1st Floor sq ft| + |
+|Basement Quality| + |
+|Garage Finish|+|
+|Fireplace Quality| + |
+|Full Bath| + |
+|Total Rooms Above Grade| + |
+|Foundation Material|+|
+|Overall Condition| + |
+|Neighborhood| + |
+|2nd Floor sq ft| + |
+|Age Since Remod| - |
+|Age Sold| - |
+|Basement Unfished sq ft| + |
+
+From observing the features that have been identified as crucial in predicting house prices, we can see that area, quality, the type of neighborhood, condition and age all have a relationship with house prices. 
 
 ---
 
 ### Conclusion and Recommendations
 
-- As there is a negative correlation between ACT/SAT scores and their respective participation rates, we cannot justify that mandating full participation of ACT/SAT for all students will lead to higher scores. This negative correlation could be caused by selection bias, as states who do not mandate or actively encourage students to take the ACT/SAT will result in only the best students choosing to sit for the exams as they know that they can score well ([source](https://blog.prepscholar.com/average-sat-and-act-scores-by-stated-adjusted-for-participation-rate)).
+* Neighborhood: For neighborhoods, there is only a strong positive relationship when the house is in a wealthier neighborhood such as Stone Brook or Northridge Heights. This may be due to buyers being able to flaunt one's status <sup> 2 </sup>. Hence, sellers who have houses in these areas can expect to price their houses higher.
 
-- The Department of Education can consider focusing their efforts in raising the education levels of the identified worst performing states, as they have the most room for improvement. This is especially so for New Mexico and Texas, which are the among the worst underperformers for both SAT and ACT. 
-    1. New Mexico
-    2. Texas
-    3. Utah
-    4. West Virginia
-    5. Illinois
-    6. Hawaii
-    7. OKlahoma
-    8. Alaska
-    9. Arizona
-    10. Nevada
+* Quality: We see that we have to care about many aspects of quality, such as exterior quality, kitchen quality and also basement quality. The materials used for foundation also plays an important role in fetching higher prices. Sellers should hence ensure that their exterior is refurbished with the best materials. Appliances and equipment in the kitchen should also be of high quality.
 
-- Through closer examination of the breakdown in ethnicity, we note that states who have higher than average 'Others' ethnicity are in high risk of underperforming. Looking at state data for hispanic individuals in 2019, we can see that many underperforming states such as New Mexico, Texas, Arizona and Nevada are indeed states that have high hispanic populations ([source](https://www.statista.com/statistics/259865/percentage-of-hispanic-population-in-the-us-by-state/)).Further research shows that certain states such as Texas and Illinois are not awarded equal amounts of education funding which is a significant factor as funds do play a part in raising education level ([source](https://cdn.americanprogress.org/content/uploads/2018/11/08042733/LessonsLearned_SchoolFunding-report-4.pdf)). Hence, we must make sure that adequate resources are provided to people of 'Others' ethnicity, to improve the overall education level of the state.
+* Condition: We observe that houses with better condition do fetch higher prices. Hence, sellers should ensure that the house is undamaged and any damage is repaired immediately.
 
+* Age: Out of all the features, age since last remodelling/addition has the highest negative relationship. We see a drop of -$7,813 with each unit increase of age since remodelled. Hence, sellers have to ensure that they modify or remodel whenever possible. Moreover, buyers hoping to resell houses should also not buy houses that are too old as old houses generally fetch lower prices.
+
+* Size: As expected, the size of the house will affect the house price. Having more rooms above ground level dramatically increases the cost of the house, especially in combination with a wealthy neighborhood. As an unfinished basement has a high negative relationship with price, sellers should ensure that their basement is completed before selling.
 ---
 
 ### Sources
