@@ -1,207 +1,198 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project 1: Standardized Test Analysis
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project 2: Predicting Housing Prices with Linear Regression
 
-### Overview
+### Contents:
+- [Problem Statement](#Problem-Statement)
+- [Datasets](#Datasets)
+- [Data Dictionary](#Data-Dictionary)
+- [Summary of Analysis](#Summary-of-Analysis)
+- [Conclusion and Recommendations](#Conclusion-and-Recommendations)
+- [Sources](#Sources)
 
-Our first module in DSI covers:
-- Basic statistics and probability
-- Many Python programming concepts
-- Programmatically interacting with files and directories
-- Visualizations
-- EDA
-- Working with Jupyter notebooks for development and reporting
-
-You might wonder if you're ready to start doing data science. While you still have **tons** to learn, there are many aspects of the data science process that you're ready to tackle. Project 1 aims to allow you to practice and demonstrate these skills.
-
-For our first project, we're going to take a look at aggregate SAT and ACT scores and participation rates in the United States. We'll seek to identify trends in the data and combine our data analysis with outside research to address our problem statement.
-
-The SAT and ACT are standardized tests that many colleges and universities in the United States require for their admissions process. This score is used along with other materials such as grade point average (GPA) and essay responses to determine whether or not a potential student will be accepted to the university.
-
-The SAT has two sections of the test: Evidence-Based Reading and Writing and Math ([*source*](https://www.princetonreview.com/college/sat-sections)). The ACT has 4 sections: English, Mathematics, Reading, and Science, with an additional optional writing section ([*source*](https://www.act.org/content/act/en/products-and-services/the-act/scores/understanding-your-scores.html)). They have different score ranges, which you can read more about on their websites or additional outside sources (a quick Google search will help you understand the scores for each test):
-* [SAT](https://collegereadiness.collegeboard.org/sat)
-* [ACT](https://www.act.org/content/act/en.html)
-
-Standardized tests have long been a controversial topic for students, administrators, and legislators. Since the 1940's, an increasing number of colleges have been using scores from sudents' performances on tests like the SAT and the ACT as a measure for college readiness and aptitude ([*source*](https://www.minotdailynews.com/news/local-news/2017/04/a-brief-history-of-the-sat-and-act/)). Supporters of these tests argue that these scores can be used as an objective measure to determine college admittance. Opponents of these tests claim that these tests are not accurate measures of students potential or ability and serve as an inequitable barrier to entry.
+---
 
 ### Problem Statement
+The problem that I would like to tackle in this project is: 
 
-Generally speaking, you will be asked to come up with a data science problem. This problem is ultimately up to you, but below are some guidelines/things to consider when crafting a problem statement:
-> 1. Consider your audience. Who is your project going to help? Who will your presentation be geared towards? Establishing your audience first can help you narrow down your scope.
-> 2. Consider the data you will use. Based on the contents of this data, think about some questions you could reasonably answer. These questions should aim to solve some kind of problem.
-> 3. Based on these questions, what would bring some kind value to your audience? This can be business insights, increase sales, make decisions, etc.
-> 4. Put everything from the above steps together into a few sentences that describe the specific problem you are trying to solve and who it will benefit.
-> [Here is a blog post](https://towardsdatascience.com/defining-a-data-science-problem-4cbf15a2a461) about crafting a data science problem statement.
+* What are the features of a property that sellers should look out for in order to sell their houses at a higher price in Ames?
 
-Here are some example prompts if you need inspiration:
-> * The new format for the SAT was released in March 2016. As an employee of the College Board - the organization that administers the SAT - you are a part of a team that tracks statewide participation and recommends where money is best spent to improve SAT participation rates. Your presentation and report should be geared toward non-technical executives with the College Board and you will use the provided data and outside research to make recommendations about how the College Board might work to increase the participation rate in a *state of your choice*.
-> * You work for a school district that has asked you to advise their high school students on what SAT or ACT score they should be aiming for based on their intended area of study or school preferences.
-> * You are hired by the state of California to analyze standardized test performance for various districts in the state and identify trends so they can allocate resources appropriately.
-> * Lately, more and more schools are opting to drop the SAT/ACT requirement for their Fall 2021 applications ([*read more about this here*](https://www.cnn.com/2020/04/14/us/coronavirus-colleges-sat-act-test-trnd/index.html)). You are hired by a college to advise their admissions team on why this should or should not continue beyond the Fall 2021 applications. (Note: problem statements related to this prompt may not be reasonable to answer just using the data provided. If you want to tackle this one, you may need to find additional data online.)
-> * *Feel free to be creative with your own prompt!*
+Conversely, this will also be useful for buyers who might be looking to resell their house.
 
-And here are some example problem statements related to the above prompts. Come up with your own or modify these for your needs, do not just copy the ones given here:
-> * The new format for the SAT was released in March 2016. Since then, levels of participation in multiple states have changed with varying legislative decisions. This project aims to explore trends in SAT and ACT participation for the years 2017-2019 and seeks to identify states that have decreasing SAT participation rates.
-> * High school students often know which colleges they would like to consider, but rarely know what SAT or ACT score they should aim for when applying to these colleges. We wish to explore the schools that have the highest and lowest SAT and ACT score requirements and see if there is a relationship between college prestige and test scores.
-> * The state of California has many school districts. This project aims to identify the districts that have the worst overall student performance on the SAT and ACT tests so the state can recommend programs and allocate resources to these districts in need. 
-> * We hypothesize that student performance on these tests is not an indicator of overall academic performance. This project seeks to see if a relationship exists between student GPA and SAT/ACT scores to support or oppose the continuation of these tests as a requirement for college applications.
-> * *Feel free to be creative with your own problem statement!*
+We will be creating a linear predictive model using using Linear, Lasso, Ridge or ElasticNet regression to investigate and identify the features which have a strong positive or negative relationship with housing sale prices.
 
 ---
 
 ### Datasets
 
-#### Provided Data
-
-There are 10 datasets included in the [`data`](./data/) folder for this project. You are required to pick **at least two** of these to complete your analysis. Feel free to use more than two if you would like, or add other relevant datasets you find online.
-
-* [`act_2017.csv`](./data/act_2017.csv): 2017 ACT Scores by State ([source](https://blog.prepscholar.com/act-scores-by-state-averages-highs-and-lows))
-* [`act_2018.csv`](./data/act_2018.csv): 2018 ACT Scores by State ([source](https://blog.prepscholar.com/act-scores-by-state-averages-highs-and-lows))
-* [`act_2019.csv`](./data/act_2019.csv): 2019 ACT Scores by State ([source](https://blog.prepscholar.com/act-scores-by-state-averages-highs-and-lows))
-* [`act_2019_ca.csv`](./data/act_2019_ca.csv): 2019 ACT Scores in California by School
-* [`sat_2017.csv`](./data/sat_2017.csv): 2017 SAT Scores by State ([source](https://blog.collegevine.com/here-are-the-average-sat-scores-by-state/))
-* [`sat_2018.csv`](./data/sat_2018.csv): 2018 SAT Scores by State ([source](https://blog.collegevine.com/here-are-the-average-sat-scores-by-state/))
-* [`sat_2019.csv`](./data/sat_2019.csv): 2019 SAT Scores by State ([source](https://blog.prepscholar.com/average-sat-scores-by-state-most-recent))
-* [`sat_2019_by_intended_college_major.csv`](./data/sat_2019_by_intended_college_major.csv): 2019 SAT Scores by Intended College Major ([source](https://reports.collegeboard.org/pdf/2019-total-group-sat-suite-assessments-annual-report.pdf))
-* [`sat_2019_ca.csv`](./data/sat_2019_ca.csv): 2019 SAT Scores in California by School
-* [`sat_act_by_college.csv`](./data/sat_act_by_college.csv): Ranges of Accepted ACT & SAT Student Scores by Colleges ([source](https://www.compassprep.com/college-profiles/))
-
-**Make sure you cross-reference your data with your data sources to eliminate any data collection or data entry issues.**
-
-#### Additional Data
-You are welcome to add any other data sources you find online to support your analysis, but this is **not required**.
+The dataset used for this project is based off the greater region of Ames, Iowa. It is collected from 2006 to 2010 by the Ames Assessor's Office. 
 
 ---
 
-### Deliverables
+### Data Dictionary
 
-All of your projects will comprise of a written technical report and a presentation. As we continue in the course, your technical report will grow in complexity, but for this initial project it will comprise:
-- A Jupyter notebook that describes your data with visualizations & statistical analysis.
-- A README markdown file the provides an introduction to and overview of your project.
-- Your presentation slideshow rendered as a .pdf file.
-**NOTE**: Your entire Github repository will be evaluated as your technical report. Make sure that your files and directories are named appropriately, that all necessary files are included, and that no unnecessary or incomplete files are included.
+|Feature|Format|Type|Description|
+|---|---|---|---|
+|**Id**|*integer*|Nominal|Identifier for each property.|
+|**PID**|*integer*|Nominal|Parcel identification number - can be used with city web site for parcel review.|
+|**MS SubClass**|*integer*|Nominal|Identifies the type of dwelling involved in the sale.| 
+|**MS Zoning**|*string*|Nominal|Identifies the general zoning classification of the sale.| 
+|**Lot Frontage**|*float*|Continuous|Linear feet of street connected to property.| 
+|**Lot Area**|*integer*|Continuous|Lot size in square feet.|
+|**Street**|*string*|Nominal|Type of road access to property.|
+|**Alley**|*string*|Nominal|Type of alley access to property.| 
+|**Lot Shape**|*string*|Ordinal|General shape of property.|
+|**Land Contour**|*string*|Nominal|Flatness of the property.| 
+|**Utilities**|*string*|Ordinal|Type of utilities available.| 
+|**Lot Config**|*string*|Nominal|Lot configuration.|
+|**Land Slope**|*string*|Ordinal|Slope of property.| 
+|**Neighborhood**|*string*|Nominal|Physical locations within Ames city limits.| 
+|**Condition 1**|*string*|Nominal|Proximity to various conditions.|
+|**Condition 2**|*string*|Nominal|Proximity to various conditions.|
+|**Bldg Type**|*string*|Nominal|Type of dwelling.|
+|**House Style**|*string*|Nominal|Style of dwelling.|
+|**Overall Qual**|*integer*|Ordinal|Rates the overall material and finish of the house.|
+|**Overall Cond**|*integer*|Ordinal|Rates the overall condition of the house| 
+|**Year Built**|*integer*|Discrete|Original construction date| 
+|**Year Remod/Add**|*integer*|Discrete|Remodel date (same as construction date if no remodeling or additions)|
+|**Roof Style**|*string*|Nominal|Type of roof|
+|**Roof Matl**|*string*|Nominal|Roof material| 
+|**Exterior 1**|*string*|Nominal|Exterior covering on house| 
+|**Exterior 2**|*string*|Nominal|Exterior covering on house|
+|**Mas Vnr Type**|*string*|Nominal|Masonry veneer type|
+|**Mas Vnr Area**|*float*|Continuous|Masonry veneer area in square feet| 
+|**Exter Qual**|*string*|Ordinal|Evaluates the quality of the material on the exterior| 
+|**Exter Cond**|*string*|Ordinal|Evaluates the present condition of the material on the exterior| |**Foundation**|*string*|Nominal|Type of foundation| 
+|**Bsmt Qual**|*string*|Ordinal|Evaluates the height of the basement|
+|**Bsmt Cond**|*string*|Ordinal|Evaluates the general condition of the basement| 
+|**Bsmt Exposure**|*string*|Ordinal|Refers to walkout or garden level walls| 
+|**BsmtFin Type 1**|*string*|Ordinal|Rating of basement finished area| 
+|**BsmtFin SF 1**|*float*|Continuous|Type 1 finished square feet|
+|**BsmtFinType 2**|*string*|Ordinal|Rating of basement finished area (if multiple types)|
+|**BsmtFin SF 2**|*float*|Ordinal|Type 2 finished square feet| 
+|**Bsmt Unf SF**|*float*|Continuous|Unfinished square feet of basement area| 
+|**Total Bsmt SF**|*float*|Continuous|Total square feet of basement area|
+|**Heating**|*string*|Nominal|Type of heating|
+|**HeatingQC**|*string*|Ordinal|Heating quality and condition|
+|**Central Air**|*string*|Nominal|Central air conditioning| 
+|**Electrical**|*string*|Ordinal|Electrical system| 
+|**1st Flr SF**|*integer*|Continuous|First Floor square feet|
+|**2nd Flr SF**|*integer*|Continuous|Second floor square feet|
+|**Low Qual Fin SF**|*integer*|Continuous|Low quality finished square feet (all floors)| 
+|**Gr Liv Area**|*integer*|Continuous|Above grade (ground) living area square feet| 
+|**Bsmt Full Bath**|*float*|Discrete|Basement full bathrooms| 
+|**Bsmt Half Bath**|*float*|Discrete|Basement half bathrooms| 
+|**Full Bath**|*integer*|Discrete|Full bathrooms above grade|
+|**Half Bath**|*integer*|Discrete|Half baths above grade| 
+|**Bedroom AbvGr**|*integer*|Discrete|Bedrooms above grade (does NOT include basement bedrooms)|
+|**Kitchen AbvGr**|*integer*|Discrete|Kitchens above grade| 
+|**KitchenQual**|*string*|Ordinal|Kitchen quality|
+|**TotRmsAbvGrd**|*integer*|Discrete|Total rooms above grade (does not include bathrooms)| |**Functional**|*string*|Ordinal|Home functionality (Assume typical unless deductions are warranted)| |**Fireplaces**|*integer*|Discrete|Number of fireplaces| 
+|**FireplaceQu**|*string*|Ordinal|Fireplace quality| 
+|**Garage Type**|*string*|Nominal|Garage location|
+|**Garage Yr Blt**|*float*|Discrete|Year garage was built| 
+|**Garage Finish**|*string*|Ordinal|Interior finish of the garage| 
+|**Garage Cars**|*float*|Discrete|Size of garage in car capacity| 
+|**Garage Area**|*float*|Continuous|Size of garage in square feet| 
+|**Garage Qual**|*string*|Ordinal|Garage quality| 
+|**Garage Cond**|*string*|Ordinal|Garage condition| 
+|**Paved Drive**|*string*|Ordinal|Paved driveway| 
+|**Wood Deck SF**|*integer*|Continuous|Wood deck area in square feet| 
+|**Open Porch SF**|*integer*|Continuous|Open porch area in square feet| 
+|**Enclosed Porch**|*integer*|Continuous|Enclosed porch area in square feet| 
+|**3-Ssn Porch**|*integer*|Continuous|Three season porch area in square feet| 
+|**Screen Porch**|*integer*|Continuous|Screen porch area in square feet| 
+|**Pool Area**|*integer*|Continuous|Pool area in square feet| 
+|**Pool QC**|*string*|Ordinal|Pool quality|
+|**Fence**|*string*|Ordinal|Fence quality| 
+|**Misc Feature**|*string*|Nominal|Miscellaneous feature not covered in other categories| 
+|**Misc Val**|*integer*|Continuous|Dollar value of miscellaneous feature| 
+|**Mo Sold**|*integer*|Discrete|Month sold (MM)|
+|**Yr Sold**|*integer*|Discrete|Year sold (YYYY)| 
+|**Sale Type**|*string*|Nominal|Type of sale| 
+|**SalePrice**|*integer*|Continuous|Sale price of houses|
 
-For your first presentation, you'll be presenting to a **non-technical** audience. You should prepare a slideshow with appropriately scaled visuals to complement a compelling narrative. **Presentation duration will be 10 minutes.**
+A comprehensive data dictionary describing the features is also included in the link below:
+
+[Data Dictionary](http://jse.amstat.org/v19n3/decock/DataDocumentation.txt)
 
 ---
 
-### Technical Report Starter Code
+### Summary of Analysis
 
-Future projects will require you to decide on the entire structure of your technical report. Here, we provide you with [starter code](./code/starter-code.ipynb) in a Jupyter notebook that will help to guide your data exploration and analysis. **If you choose to edit the core structure of this notebook, make sure you don't exclude any of the requested operations**.
+The following features were identified as having a relationship with sale price:
 
----
+|Feature|Relationship|
+|---|---|
+|overall_qual|+|
+|ground living area| + |
+|exterior quality| + |
+|Kitchen Quality| + |
+|Total Basement sq ft|+|
+|Garage Area| + |
+|1st Floor sq ft| + |
+|Basement Quality| + |
+|Garage Finish|+|
+|Fireplace Quality| + |
+|Full Bath| + |
+|Total Rooms Above Grade| + |
+|Foundation Material|+|
+|Overall Condition| + |
+|Neighborhood| + |
+|2nd Floor sq ft| + |
+|Age Since Remod| - |
+|Age Sold| - |
+|Basement Unfished sq ft| - |
 
-### Suggested Resources
-
-Here's a link on [how to give a good lightning talk](https://www.semrush.com/blog/16-ways-to-prepare-for-a-lightning-talk/), which provides some good recommendations for short presentations.
-
-[Here's a great summary](https://towardsdatascience.com/storytelling-with-data-a-data-visualization-guide-for-business-professionals-97d50512b407) of the main points of the book _Storytelling with Data_, which I can't recommend enough. [Here's a blog post](http://www.storytellingwithdata.com/blog/2017/8/9/my-guiding-principles) by the author about his guiding principles for visualizations.
-
----
-
-### Submission
-
-**Materials must be submitted on 02 July 2021 09:00AM through your GitHub account repo shared with the Teaching Team.**
-
-Your technical report will be hosted on Github Enterprise. Make sure it includes:
-
-- A README.md (that isn't this file)
-- Jupyter notebook(s) with your analysis (renamed to describe your project)
-- Data files
-- Presentation slides
-- Any other necessary files (images, etc.)
-
----
-
-### Presentation Structure
-
-- **Presentation Time: 10 minutes**
-- Use Google Slides or some other visual aid (Keynote, Powerpoint, etc).
-- Consider the audience. Assume you are presenting to a non-technical audience (executives with the College Board, school administrators, admissions counselors, State officials, etc.).
-- Start with the **data science problem**.
-- Use visuals that are appropriately scaled and interpretable.
-- Talk about your procedure/methodology (high level, **CODE IS ALWAYS INAPPROPRIATE FOR A NON-TECHNICAL AUDIENCE**).
-- Talk about your primary findings.
-- Make sure you provide **clear recommendations** that follow logically from your analyses and narrative and answer your data science problem.
-
-Be sure to rehearse and time your presentation before class.
+From observing the features that have been identified as crucial in predicting house prices, we can see that area, quality, the type of neighborhood, condition and age all have a relationship with house prices. 
 
 ---
 
-### Rubric
-Teaching team will evaluate your project using the following criteria.  You should make sure that you consider and/or follow most if not all of the considerations/recommendations outlined below **while** working through your project.
+### Conclusion and Recommendations
 
-**Note:** Presentation will be done as a group while codes will be prepared and submitted by each student.
+* Neighborhood: For neighborhoods, there is only a strong positive relationship when the house is in a wealthier neighborhood such as Stone Brook or Northridge Heights. This may be due to buyers being able to flaunt one's status <sup> 2 </sup>. Hence, sellers who have houses in these areas can expect to price their houses higher.
 
-**Scores will be out of 21 points based on the 7 items in the rubric.** <br>
-*3 points per section*<br>
+* Quality: We see that we have to care about many aspects of quality, such as exterior quality, kitchen quality and also basement quality. The materials used for foundation also plays an important role in fetching higher prices. Sellers should hence ensure that their exterior is refurbished with the best materials. Appliances and equipment in the kitchen should also be of high quality.
 
-| Score | Interpretation |
-| --- | --- |
-| **0** | *Project fails to meet the minimum requirements for this item.* |
-| **1** | *Project meets the minimum requirements for this item, but falls significantly short of portfolio-ready expectations.* |
-| **2** | *Project exceeds the minimum requirements for this item, but falls short of portfolio-ready expectations.* |
-| **3** | *Project meets or exceeds portfolio-ready expectations; demonstrates a thorough understanding of every outlined consideration.* |
+* Condition: We observe that houses with better condition do fetch higher prices. Hence, sellers should ensure that the house is undamaged and any damage is repaired immediately.
 
-**Project Organization**
-- Are modules imported correctly (using appropriate aliases)?
-- Are data imported/saved using relative paths?
-- Does the README provide a good executive summary of the project?
-- Is markdown formatting used appropriately to structure notebooks?
-- Are there an appropriate amount of comments to support the code?
-- Are files & directories organized correctly?
-- Are there unnecessary files included?
-- Do files and directories have well-structured, appropriate, consistent names?
+* Age: Out of all the features, age since last remodelling/addition has the highest negative relationship. We see a drop of -$7,813 with each unit increase of age since remodelled. Hence, sellers have to ensure that they modify or remodel whenever possible. Moreover, buyers hoping to resell houses should also not buy houses that are too old as old houses generally fetch lower prices.
 
-**Clarity of Message**
-- Is the problem statement clearly presented?
-- Does a strong narrative run through the project?
-- Does the student provide appropriate context to connect individual steps back to the overall project?
-- Is it clear how the final recommendations were reached?
-- Are the conclusions/recommendations clearly stated?
+* Size: As expected, the size of the house will affect the house price. Having more rooms above ground level dramatically increases the cost of the house, especially in combination with a wealthy neighborhood. As an unfinished basement has a high negative relationship with price, sellers should ensure that their basement is completed before selling.
+---
 
-**Python Syntax and Control Flow**
-- Is care taken to write human readable code?
-- Is the code syntactically correct (no runtime errors)?
-- Does the code generate desired results (logically correct)?
-- Does the code follows general best practices and style guidelines?
-- Are Pandas functions used appropriately?
-- Does the student demonstrate mastery masking in Pandas?
-- Does the student demonstrate mastery sorting in Pandas?
+### Sources
+    
 
-**Data Cleaning and EDA**
-- Does the student fix data entry issues?
-- Are data appropriately labeled?
-- Are data appropriately typed?
-- Are datasets combined correctly?
-- Are appropriate summary statistics provided?
-- Are steps taken during data cleaning and EDA framed appropriately?
+1. https://www.cityofames.org/government/departments-divisions-i-z/public-works/alley-maintenance
 
-**Visualizations**
-- Are the requested visualizations provided?
-- Do plots accurately demonstrate valid relationships?
-- Are plots labeled properly?
-- Plots interpreted appropriately?
-- Are plots formatted and scaled appropriately for inclusion in a notebook-based technical report?
+   Summary: Government website summarising alley length where we infer that many houses probably will not have alleys.
+   
+2. https://www.census.gov/construction/chars/
+    
+   Summary: Goverment data which shows number of houses that own fireplaces broken down by year. From 2006-2010, about 40% of houses do not have fireplaces.
+   
+3. https://statisticalatlas.com/neighborhood/Iowa/Ames/Stone-Brooke/Household-Income
 
-**Research and Conceptual Understanding**
-- Were useful insights gathered from outside sources?
-- Are sources clearly identified?
-- Does the student provide appropriate interpretation with regards to descriptive and inferential statistics?
+   Summary: The source displays graphs that show how Stone Brook had a higher household income at each percentile as compared to the general Ames population.
+   
+4. https://www.weichert.com/search/community/neighborhood.aspx?hood=60290
 
-**Presentation**
-- Is the problem statement clearly presented?
-- Does a strong narrative run through the presentation building toward a final conclusion?
-- Are the conclusions/recommendations clearly stated?
-- Is the level of technicality appropriate for the intended audience?
-- Is the student substantially over or under time?
-- Does the student appropriately pace their presentation?
-- Does the student deliver their message with clarity and volume?
-- Are appropriate visualizations generated for the intended audience?
-- Are visualizations necessary and useful for supporting conclusions/explaining findings?
+   Summary: The article displayed graphs which show that 75% of the workforce in NorthRidge Heights were white collar jobs, indicating higher wealth.
+   
+5. https://www.99.co/singapore/insider/factors-affecting-resale-value/
 
-In order to pass the project, students must earn a minimum score of 1 for each category.
-- Earning below a 1 in one or more of the above categories would result in a failing project.
-- While a minimum of 1 in each category is the required threshold for graduation, students should aim to earn at least an average of 1.5 across each category. An average score below 1.5, while it may be passing, means students may want to solicit specific feedback in order to significantly improve the project before showcasing it as part of a portfolio or the job search.
+   Summary: We see that age, condition, size and location all play a part in housing valuation.
 
-### REMEMBER:
 
-This is a learning environment and you are encouraged to try new things, even if they don't work out as well as you planned! While this rubric outlines what we look for in a _good_ project, it is up to you to go above and beyond to create a _great_ project. **Learn from your failures and you'll be prepared to succeed in the workforce**.
+6. https://www.thebalance.com/pricing-houses-to-sell-1798968
+   
+   Summary: Perceptions of desirability causes neighborhoods to have a relationship with house prices. Wealthier neighborhoods allows for one to flaunt their status. Age of the house is also crucial
+
+
+7. https://www.compmort.com/home-location-and-property-value/
+
+   Summary: This article highlights the importance of neighborhoods and proximity to amenities like schools and hospitals.
+   
+
+8. https://www.investopedia.com/articles/mortages-real-estate/11/factors-affecting-real-estate-market.asp
+   
+   Summary: This article highlights how government policies/subsidies and economic factors like inflation and supply/demand have a relationship with house prices.
