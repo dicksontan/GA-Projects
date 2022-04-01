@@ -25,7 +25,7 @@ Through comparing 2 different subreddits that are reflective of such financially
 
 ### Datasets
 
-The subreddits that we will be choosing are r/wallstreetbets for investors looking for higher risk high growth plans and r/povertyfinance for investors who are better suited for a basic savings/investment plan.
+The subreddits that we will be using are r/wallstreetbets for investors looking for higher risk high growth plans and r/povertyfinance for investors who are better suited for a basic savings/investment plan.
 
 ---
 
