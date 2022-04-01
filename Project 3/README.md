@@ -5,7 +5,6 @@
 - [Problem Statement](#Problem-Statement)
 - [Datasets](#Datasets)
 - [Final Model](#Final-Model)
-- [Conclusion and Summary of Analysis](#Conclusion-and-Recommendations)
 - [Summary of Analysis](#Summary-of-Analysis)
 - [Model Limitations](#Model-Limitations)
 - [Future Works](#Future-Works)
@@ -28,16 +27,17 @@ Through comparing 2 different subreddits that are reflective of such financially
 The subreddits that we will be using are r/wallstreetbets for investors looking for higher risk high growth plans and r/povertyfinance for investors who are better suited for a basic savings/investment plan. We will scrape and analyze 10,000 posts from each subreddit.
 
 ---
+### Final Model
 
-### Conclusion and Summary of Analysis
+We have built a model which utilizes Count Vectorizer for bag of words model, logistic regression to find the probabilities of each word belonging to r/wallstreetbets, and then putting the probabilities together with number of comments into another logistic regression model. We chose to accept more false positives in exchange for false negatives, and have achieved a final accuracy score of 90.5%. 
+
+### Summary of Analysis
 
 - We observe that individuals who are financially challenged are more desperate in seeking help. Our model thus pegs words such as 'help' and 'need' to them. They are also more inclined to use more common everyday financial terms, such as 'credit card' and 'bank'.
 
 - Building on our first point, as users who are financially challenged tend to seek help, their posts will naturally attract more comments from people giving advice etc. This thus allows us to incorporate numerical features such as number of comments into the model.
 
 - Individuals who have higher capital and prefer high risk high growth investment strategies tend to be more analytical in their post. Discussions can commonly about when to enter or exit the stock market. Moreover, they usually will use new finance terms relating to the latest trends, such as 'moon' for 'to the moon' where stock prices rise.
-
-- We have built a model which utilizes Count Vectorizer for bag of words model, logistic regression to find the probabilities of each word belonging to r/wallstreetbets, and then putting the probabilities together with number of comments into another logistic regression model. We chose to accept more false positives in exchange for false negatives, and have achieved a final accuracy score of 90.5%. 
 
 ---
 
