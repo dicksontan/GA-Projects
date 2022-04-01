@@ -4,7 +4,7 @@
 ### Contents:
 - [Problem Statement](#Problem-Statement)
 - [Datasets](#Datasets)
-- [Final Model](#Final-Model)
+- [Proposed Model](#Proposed-Model)
 - [Summary of Analysis](#Summary-of-Analysis)
 - [Model Limitations](#Model-Limitations)
 - [Future Works](#Future-Works)
@@ -27,7 +27,7 @@ Through comparing 2 different subreddits that are reflective of such financially
 The subreddits that we will be using are r/wallstreetbets for investors looking for higher risk high growth plans and r/povertyfinance for investors who are better suited for a basic savings/investment plan. We will scrape and analyze 10,000 posts from each subreddit.
 
 ---
-### Final Model
+### Proposed Model
 
 We have built a model which utilizes Count Vectorizer for bag of words model, logistic regression to find the probabilities of each word belonging to r/wallstreetbets, and then putting the probabilities together with number of comments into another logistic regression model. We chose to accept more false positives in exchange for false negatives, and have achieved a final accuracy score of 90.5%. 
 
