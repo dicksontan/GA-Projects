@@ -29,7 +29,7 @@ The subreddits that we will be using are r/wallstreetbets for investors looking 
 ---
 ### Proposed Model
 
-We initially explored Logistic Regression, Random Forest and multinomial Naive Bayes, with Count and TFIDF vectorizers. However, we found that the model with best accuracy is a model that utilizes Count Vectorizer for bag of words model, logistic regression to find the probabilities of each post belonging to r/wallstreetbets, and then putting the probabilities together with number of comments into another logistic regression model. Though we initially achieved an accuracy of 93%, we chose to accept more false positives in exchange for false negatives, and have achieved a final accuracy score of 90.5%, with recall 97.9%. 
+We initially explored Logistic Regression, Random Forest and multinomial Naive Bayes, with Count and TFIDF vectorizers. However, we found that the model with best accuracy is a model that utilizes Count Vectorizer for bag of words model, logistic regression to find the probabilities of each post belonging to r/wallstreetbets, and then putting the probabilities together with number of comments into another logistic regression model. Though we initially achieved an accuracy of 93%, we chose to accept more false positives in exchange for false negatives, and have achieved a final accuracy score of 91.9%, with recall 97.5%. 
 
 ### Summary of Analysis
 
