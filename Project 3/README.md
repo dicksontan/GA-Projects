@@ -63,7 +63,7 @@ We initially explored Logistic Regression, Random Forest and multinomial Naive B
 ---
 
 ### Sources
-    
+
 1. https://www.forbes.com/sites/georgeschultze/2021/06/15/are-the-apes-now-running-wall-street/?sh=36860ee35e88
     
     Summary: Understood more about the term apes, which is finance lingo for banding together to buy a stock.
@@ -88,3 +88,8 @@ We initially explored Logistic Regression, Random Forest and multinomial Naive B
 5. https://www.codeproject.com/Articles/5269447/Pros-and-Cons-of-NLTK-Sentiment-Analysis-with-VADE
     
     Summary: The article talks about the weaknesses of VADER sentiment analyzer like how it is unable to understand jargon.
+    
+    
+6. https://aclanthology.org/W19-6203.pdf
+
+    Summary: Lemmatization is not necessary for english words due to its simple morphology.
