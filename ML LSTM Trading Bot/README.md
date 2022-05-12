@@ -35,6 +35,7 @@ In our notebooks, we have explored a general daily SARIMA Model, a momentum base
 |Total|51%|$9442|
 
 
+
 ### Summary of Analysis
 
 - In this project, we have tried a SARIMA model, momentum based strategy trading purely on volatility, a NLP model and LSTM Model. We have seen that none of the models are profitable except for our LSTM Model. With the proper risk management, our current model has backtested a yearly rate of return of ~ 21.7%.
