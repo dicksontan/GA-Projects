@@ -20,7 +20,7 @@ In this project, we would like to try and find profitable trading strategies wit
 
 ### Datasets
 
-We obtain our candle stick data from Oanda, which is a US based broker specializing in Forex. For pre-known financial events, we will scrape the data from Forex Factory using Beautiful Soup. Forex Factory is the number 1 site where people go to to identify important upcoming financial events. It also nicely separates events between low, medium and high importance. We will filter out only the medium and high importance.
+We obtain our candle stick data from Oanda, which is a US based broker specializing in Forex. For pre-known financial events, we will scrape the data from Forex Factory using Beautiful Soup. Forex Factory is the number 1 site where people go to to identify important upcoming financial events. It also nicely separates events between low, medium and high importance. We will filter out only the medium and high importance to train our model.
 
 ---
 
@@ -33,6 +33,7 @@ In our notebooks, we have explored a general daily SARIMA Model, a momentum base
 |Long|55%|$8532|
 |Short|47%|$889|
 |Total|51%|$9442|
+
 
 ### Summary of Analysis
 
@@ -67,4 +68,4 @@ In our notebooks, we have explored a general daily SARIMA Model, a momentum base
 
 1. https://www.sciencedirect.com/science/article/pii/S0970389621000227
     
-    Summary: This article compares GOLD volatility as compared to other assets.
+    Summary: This article compares Gold volatility as compared to other assets.
