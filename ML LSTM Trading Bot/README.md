@@ -34,7 +34,7 @@ In our notebooks, we have explored a general daily SARIMA Model, a momentum base
 |Short|47%|$889|
 |Total|51%|$9442|
 
-
+---
 
 ### Summary of Analysis
 
