@@ -1,4 +1,4 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Capstone
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Capstone: Build a Trading Bot to Trade Gold for Machine Learning
 
 
 ### Contents:
@@ -14,82 +14,57 @@
 
 ### Problem Statement
 
-The problem that I would like to tackle in this project is: 
-
-As a data Scientist working for a financial advisory company, we have been tasked to classify investors who require basic savings/investment plans from higher net worth individuals who prefer higher growth investment plans. 
-
-Through comparing 2 different subreddits that are reflective of such financially challenged or risky high net worth individuals, we aim to build a classification model and deploy on other forums so that our financial advisors can reach out to individuals with a suitable financial plan. This will thus result in greater conversion rate and more profits for the company. The subreddits that we will be choosing are r/wallstreetbets for investors looking for higher risk high growth plans and r/povertyfinance for investors who are better suited for a basic savings/investment plan.
+In this project, we would like to try and find profitable trading strategies with Gold. Gold is known as a safe haven asset which investors flock to in times of makret uncertainty. This causes gold to be highly susceptible to financial events, such as when the monthly Non Farm payroll employment report releases. We would like like to build a trading bot and trade on this volatility.
 
 ---
 
 ### Datasets
 
-The subreddits that we will be using are r/wallstreetbets for investors looking for higher risk high growth plans and r/povertyfinance for investors who are better suited for a basic savings/investment plan. We will scrape and analyze 10,000 posts from each subreddit.
+We obtain our candle stick data from Oanda, which is a US based broker specializing in Forex. For pre-known financial events, we will scrape the data from Forex Factory using Beautiful Soup. Forex Factory is the number 1 site where people go to to identify important upcoming financial events. It also nicely separates events between low, medium and high importance. We will filter out only the medium and high importance.
 
 ---
+
 ### Proposed Model
 
-We initially explored Logistic Regression, Random Forest and multinomial Naive Bayes, with Count and TFIDF vectorizers. However, we found that the model with best accuracy is a model that utilizes Count Vectorizer for bag of words model, logistic regression to find the probabilities of each post belonging to r/wallstreetbets, and then putting the probabilities together with number of comments into another logistic regression model. Though we initially achieved an accuracy of 93%, we chose to accept more false positives in exchange for false negatives, and have achieved a final accuracy score of 91.9%, with recall 97.5%. 
+In our notebooks, we have explored a general daily SARIMA Model, a momentum based strategy trading purely on volatility, a NLP model and a LSTM Model. Ultimately we found the LSTM Model to be highly profitable. A summary of the results for our LSTM Model (backtested over 7 years) is as shown below:
+
+|Trade Type|Success Rate|Profit per Ounce|
+|---|---|---|
+|Long|55%|$8532|
+|Short|47%|$889|
+|Total|51%|$9442|
 
 ### Summary of Analysis
 
-- We observe that individuals who are financially challenged are more desperate in seeking help. Our model thus pegs words such as 'help' and 'need' to them. They are also more inclined to use more common everyday financial terms, such as 'credit card' and 'bank'.
-
-- Building on our first point, as users who are financially challenged tend to seek help, their posts will naturally attract more comments from people giving advice etc. This thus allows us to incorporate numerical features such as number of comments into the model.
-
-- Individuals who have higher capital and prefer high risk high growth investment strategies tend to be more analytical in their post. Discussions can commonly about when to enter or exit the stock market. Moreover, they usually will use new finance terms relating to the latest trends, such as 'moon' for 'to the moon' where stock prices rise.
+- In this project, we have tried a SARIMA model, momentum based strategy trading purely on volatility, a NLP model and LSTM Model. We have seen that none of the models are profitable except for our LSTM Model. With the proper risk management, our current model has backtested a yearly rate of return of ~ 21.7%.
 
 ---
 
 ### Model Limitations
 
-- As high growth high risk investors like to use new finance lingo, the company will have to constantly ensure that features are updated and not outdated. For example, words like 'Russia' and 'moon' plays an important role in classifying posts now due to the volatility caused by the crisis, but may not be in the future.
+- More fine-tuning has to be done on both the architecture and the number of epochs in order to achieve more accurate predictions.
 
-
-- The model may not be able to predict the right subreddit when keywords are taken out of context. For example, individuals may complain about their financial situation in r/povertyfinance as they may have lost their money in 'stocks', but the model will classify it as individuals with high income and can spend on high growth investment plans.
-
-
--  The model is not able to fully analyse non-ASCII characters, such as emojis and foreign characters. Though we removed them in our model, if possible, they should also be considered data observations too. For example, emojis like 🙃 is a good indicator that someone is being sarcastic. Perhaps we could use a tool like vader to process these non-ASCII characters. We could also manually train our model to understand these characters, though that will require a significant amount of time.
+- We will also need to do more analysis on the best trading thresholds to achieve maximum profitability.
 
 ### Future Works
 
-- We can explore using other models and tools. For example, instead of classifying posts using frequency of words, we can consider using word similarities/analogies such as word2vec. We can also consider using stemming instead of lemmatizing for our words. Other classifiers such as K-Nearest Neighbors classifier and boosting algorithms can also be explored.
+- Modelling
+    - We will need to fine-tune our model parameters as well as trading rules.
+    - We can explore building a bidirectional LSTM Model
 
+- Infrastructure
+    - Build in C++/Rust for greater speed
+    - Build a streaming API model instead of REST API
+    - Leverage on cloud to auto-run bot
 
-- We notice how vader sentiment analysis is not able to read the sentiment of finance terms such as bull and bear. We can thus explore using a sentiment dictionary more relevant for finance. We can even train our own sentiment library for the model.
+ - Usage
+    - Model black swan events (e.g. 9-11 event)
+    - Experiment on other volatile assets (e.g. GBPUSD)
 
-
-- We can also expand ngram words to include 3 or more words. This will allow us to find greater synergies and allow our model to encapsulate the context of the post better.
 ---
 
 ### Sources
 
-1. https://www.forbes.com/sites/georgeschultze/2021/06/15/are-the-apes-now-running-wall-street/?sh=36860ee35e88
+1. https://www.sciencedirect.com/science/article/pii/S0970389621000227
     
-    Summary: Understood more about the term apes, which is finance lingo for banding together to buy a stock.
-    
-    
-    
-2. https://www.fidelity.com/Learning-center/trading-investing/ukraine-russia
-
-   Summary: Understood that the Ukraine crisis caused volatility in the markets, thus resulting in much discussion among investors
-   
-   
-3. https://www.vox.com/the-goods/22249458/gamestop-stock-wallstreetbets-reddit-citron
-
-    Summary: Read up on the backstory of Gamestop and understood it's presence in forums.
-    
-    
-4. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5147524/
-    
-    Summary: Understood how to find the optimal threshold estimation for ROC-AUC curve for a binary classifier using game theory.
-    
-    
-5. https://www.codeproject.com/Articles/5269447/Pros-and-Cons-of-NLTK-Sentiment-Analysis-with-VADE
-    
-    Summary: The article talks about the weaknesses of VADER sentiment analyzer like how it is unable to understand jargon.
-    
-    
-6. https://aclanthology.org/W19-6203.pdf
-
-    Summary: Lemmatization is not necessary for english words due to its simple morphology.
+    Summary: This article compares GOLD volatility as compared to other assets.
