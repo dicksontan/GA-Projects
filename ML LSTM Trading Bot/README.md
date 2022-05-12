@@ -48,6 +48,8 @@ In our notebooks, we have explored a general daily SARIMA Model, a momentum base
 
 - We will also need to do more analysis on the best trading thresholds to achieve maximum profitability.
 
+---
+
 ### Future Works
 
 - Modelling
