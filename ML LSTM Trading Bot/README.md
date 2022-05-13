@@ -26,7 +26,11 @@ We obtain our candle stick data from Oanda, which is a US based broker specializ
 
 ### Proposed Model
 
-In our notebooks, we have explored a general daily SARIMA Model, a momentum based strategy trading purely on volatility, a NLP model and a LSTM Model. Ultimately we found the LSTM Model to be highly profitable. A summary of the results for our LSTM Model (backtested over 7 years) is as shown below:
+In our notebooks, we have explored a general daily SARIMA Model, a momentum based strategy trading purely on volatility, a NLP model and a LSTM Model.
+
+The models should be viewed in the following order: SARIMA Model, Baseline Model, NLP Model and LSTM Model.
+
+Ultimately we found the LSTM Model to be highly profitable. A summary of the results for our LSTM Model (backtested over 7 years) is as shown below:
 
 |Trade Type|Success Rate|Profit per Ounce|
 |---|---|---|
