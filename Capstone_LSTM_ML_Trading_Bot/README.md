@@ -58,7 +58,7 @@ Ultimately we found the LSTM Model to be highly profitable. A summary of the res
 
 - Modelling
     - We will need to fine-tune our model parameters as well as trading rules.
-    - We can explore building a bidirectional LSTM Model
+    - We can explore building a bidirectional LSTM Model 
 
 - Infrastructure
     - Build in C++/Rust for greater speed
